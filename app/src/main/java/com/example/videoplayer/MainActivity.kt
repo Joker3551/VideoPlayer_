@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity(), Player.Listener {
         playerView.player = player
         player.addListener(this)
         TimeCodes()
+        TimeAcc()
 
     }
 
@@ -92,6 +93,30 @@ class MainActivity : AppCompatActivity(), Player.Listener {
             player.seekTo(600000)
         }
 
+    }
+
+    private fun TimeAcc(){
+        val button1 : Button = findViewById(R.id.button_0_5x)
+        val button2 : Button = findViewById(R.id.button_1x)
+        val button3 : Button = findViewById(R.id.button_1_25x)
+        val button4 : Button = findViewById(R.id.button_1_5x)
+        val button5 : Button = findViewById(R.id.button_2x)
+
+        button1.setOnClickListener{
+            player.setPlaybackSpeed(0.5F)
+        }
+        button2.setOnClickListener{
+            player.setPlaybackSpeed(1.0F)
+        }
+        button3.setOnClickListener{
+            player.setPlaybackSpeed(1.25F)
+        }
+        button4.setOnClickListener{
+            player.setPlaybackSpeed(1.5F)
+        }
+        button5.setOnClickListener{
+            player.setPlaybackSpeed(2.0F)
+        }
     }
 
     override fun onStop() {
