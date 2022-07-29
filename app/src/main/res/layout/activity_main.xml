@@ -136,7 +136,15 @@
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
-
+        <Button
+            style="@style/MaterialAlertDialog.Material3"
+            android:id="@+id/cycle"
+            android:layout_gravity="bottom"
+            android:text="Цикл"
+            android:visibility="visible"
+            android:layout_marginBottom="95dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </FrameLayout>
 
 
